@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    src: url('Roboto-Regular.ttf') format('truetype');
+}
+
+html, body {
+    font-family: 'Poppins';
+    background-color: #E8E9E8E9;
+}

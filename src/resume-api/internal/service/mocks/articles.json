@@ -1,0 +1,16 @@
+[{
+    "title": "¿Cómo enviar un mail con Spring Boot?",
+    "description": "Corta implementación de un proyecto para enviar mails. Los sistemas de correo electrónico se basan en un modelo de almacenamiento y reenvío, de modo que no es necesario que ambos extremos se encuentren conectados simultáneamente. Para ello se emplea un servidor de correo que hace las funciones de intermediario, guardando temporalmente los mensajes antes de enviarse a sus destinatarios."
+}, {
+    "title": "SpringBoot — Criteria— JPA.",
+    "description": "En sistemas donde trabajamos con información gestionada con JPA (Java Persistance API), no es difícil tomar la decisión incorrecta a la hora de hacer una consulta compleja en la base de datos, ya que es realmente sencillo hacer consultas simples con JpaRepository por ejemplo. Pero qué pasa cuando necesitamos hacer una consulta más compleja o condicionada? Lo primero que se nos viene a la mente(al menos a mi) es crear un StringBuilder e ir concatenando una query nativa dependiendo de mi “objeto filtro”el cual medirá los parámetros para poder filtrar mi información, solución que es realmente muy mala, porque los errores solo los pueden detectar en tiempo de ejecución y es pésimo para la mantención de un sistema. Otra solución relativamente no tan sencilla es crear un procedimiento almacenado donde no tenemos la seguridad de que funcione correctamente si cambiamos la base de datos. Ambas soluciones son sensibles al SQL INJECTION."
+},{
+    "title": "¿Cómo configurar un proxy con Nuxt?",
+    "description": "Los proyectos orientados a servicios siempre tienen la problemática de comunicación entre servidores, debido a los problemas del CORS, más los problemas del proxy, entre otros. En este caso siempre se usan servidores como apache, glassfish o nginx, entre otros. Estos servidores facilitan la comunicación entre una aplicación web y una aplicación rest. Pero en caso de que la aplicación web este hecha con Nuxt.js puedes generar el proxy directamente desde la aplicación y aquí se explicará cómo hacerlo."
+},{
+    "title": "Cómo aplicar JPA en Spring Boot?",
+    "description": "Spring es un framework​ que abarca un conjunto estandarizado de conceptos, prácticas y criterios para llevar a cabo la resolución de un problema, además tiene herramientas para llevar el desarrollo de la solución de una manera más fácil y rápida. Spring Boot es un proyecto de Spring donde su función principal es facilitar la creación de aplicaciones Java."
+},{
+    "title": "¿Por qué utilizar docker-compose?",
+    "description": "Muchas veces en los proyectos de informática, se considera complicada la instalación para comenzar el desarrollo de algún sistema o alguna aplicación. Esto abarca problemas tanto de espacio en el equipo, como que el sistema operativo incompatible, o bien, problemas de conexión para descargar los programas necesarios para llevar a cabo el desarrollo, entre otros."
+}]
