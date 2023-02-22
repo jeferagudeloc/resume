@@ -1,5 +1,5 @@
 <template>
-<div class="text-2xl text-gray-900 text-center"> this is what i can do </div>
+<div class="text-2xl text-gray-900 text-center"> this is what i do </div>
 
 <ul class="
   nav nav-tabs nav-justified

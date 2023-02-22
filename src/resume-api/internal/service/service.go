@@ -24,7 +24,23 @@ func (bff *Service) GetArticles() ([]models.Artycle, error) {
 
 	articlesOutput := []models.Artycle{}
 	json.Unmarshal([]byte(jsonString), &articlesOutput)
-	fmt.Printf("Operation: %s", articlesOutput[0])
 
 	return articlesOutput, nil
+}
+
+func (bff *Service) GetProjects() ([]models.Project, error) {
+	fmt.Println("GetProjects")
+	jsonString, errFile := ioutil.ReadFile("/Users/jagudelo/projects/jeferagudeloc/resume/src/resume-api/internal/service/mocks/portfolio.json")
+	if errFile != nil {
+		fmt.Println(errFile)
+	}
+
+	projectsOutput := []models.Project{}
+	json.Unmarshal([]byte(jsonString), &projectsOutput)
+
+	fmt.Println(len(projectsOutput))
+	fmt.Println(len(projectsOutput))
+	fmt.Println(len(projectsOutput))
+
+	return projectsOutput, nil
 }

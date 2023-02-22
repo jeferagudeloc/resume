@@ -5,10 +5,14 @@
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
-    src: url('Roboto-Regular.ttf') format('truetype');
+    src: url('Poppins-Regular.ttf') format('truetype');
 }
 
 html, body {
     font-family: 'Poppins';
-    background-color: #E8E9E8E9;
+    background-color: #D2D2CF;
+}
+
+.h-screen-half {
+    height: 80vh;
 }
