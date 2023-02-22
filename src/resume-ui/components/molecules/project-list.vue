@@ -59,7 +59,15 @@
                         v-bind:src="'_nuxt/assets/img/tech/' + techId +'.png'" />
                 </div>
             </div>
-            <div class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50 mt-auto text-center cursor-pointer"
+            <div class="columns-2 mt-auto mb-2">
+                <div class="text-base text-neutral-600 dark:text-neutral-200 text-center">
+                    from: {{project.initialDate}}
+                </div>
+                <div class="text-base text-neutral-600 dark:text-neutral-200 text-center">
+                    to: {{project.finishDate ? project.finishDate : 'current'}}
+                </div>
+            </div>
+            <div class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50 text-center cursor-pointer"
                 @click="setStyle(project)">
                 <span> View detail </span>
             </div>
