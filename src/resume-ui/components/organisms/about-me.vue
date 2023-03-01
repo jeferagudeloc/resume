@@ -45,7 +45,7 @@
             <div class="flex flex-row items-center justify-end space-x-10">
                 <div v-for="(language,index) in languages"
                     class="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-100 cursor-pointer"
-                    :class="index % 2 != 1 ? 'mt-12': ''" @click="goTolanguageLanding(language.landing)">
+                    :class="index % 2 != 1 ? 'mt-12': ''" @click="goTolanguagePortfolio(language.id)">
                     <div class="flex justify-center">
                         <i :class="`devicon-${language.id}-plain colored text-7xl`"></i>
                     </div>
@@ -148,6 +148,12 @@
         methods: {
             goToCompanyLanding(landingUrl) {
                 window.open(landingUrl)
+            },
+            goTolanguagePortfolio(languageId) {
+                this.$router.push(
+                    {
+                        path:'/portfolio'
+                    })
             }
         },
         mounted() {

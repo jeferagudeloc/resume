@@ -6,11 +6,6 @@
 import Home from "~/components/organisms/home.vue"
 export default defineComponent({
     name: 'home',
-    methods: {
-        handleNavigation() {
-            this.$router.push("/about")
-        }
-    },
     components: {
         Home
     }
