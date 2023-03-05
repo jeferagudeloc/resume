@@ -3,16 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    src: url('Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins";
+  font-style: normal;
+  src: url("Poppins-Regular.ttf") format("truetype");
 }
 
-html, body {
-    font-family: 'Poppins';
-    background-color: #D2D2CF;
+html,
+body {
+  font-family: "Poppins";
+  background: #d2d2cf;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .h-screen-half {
-    height: 80vh;
+  height: 80vh;
+}
+
+.min-w-200 {
+  min-width: 200px;
 }

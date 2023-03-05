@@ -1,13 +1,13 @@
-<template>
-    <Home />
+<template lang="pug">
+Home
 </template>
 
 <script>
-import Home from "~/components/organisms/home.vue"
+import Home from "~/components/organisms/home.vue";
 export default defineComponent({
-    name: 'home',
-    components: {
-        Home
-    }
-})
+  name: "home",
+  components: {
+    Home,
+  },
+});
 </script>

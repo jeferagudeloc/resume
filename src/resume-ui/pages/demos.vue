@@ -1,16 +1,14 @@
-<template>
-    <DemosOrganism />
+<template lang="pug">
+DemosOrganism
 </template>
 
 <script>
-
-import DemosOrganism from "~/components/organisms/demos.vue"
+import DemosOrganism from "~/components/organisms/demos.vue";
 
 export default defineComponent({
-    name: 'demos',
-    components: {
-        DemosOrganism
-    }
-})
-
+  name: "demos",
+  components: {
+    DemosOrganism,
+  },
+});
 </script>

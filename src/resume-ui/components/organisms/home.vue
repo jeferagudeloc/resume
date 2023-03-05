@@ -1,8 +1,8 @@
 <script>
-    export default defineComponent({
-        name: 'home',
-        mounted() {
-            this.$router.push("/about");
-        },
-    })
+export default defineComponent({
+  name: "home",
+  mounted() {
+    this.$router.push("/about");
+  },
+});
 </script>

@@ -1,22 +1,18 @@
-<template>
-    <NuxtLayout>
-      <Header />
-      <NuxtPage />
-    </NuxtLayout>
+<template lang="pug">
+NuxtLayout
+  Header
+  NuxtPage
 </template>
 
 <script>
-
-import Header from '~/components/molecules/layout/header.vue'
+import Header from "~/components/molecules/layout/header.vue";
 
 export default defineComponent({
-  name: 'app',
+  name: "app",
   components: {
-    Header
-  }
-  
-})
-
+    Header,
+  },
+});
 </script>
 
 <style>

@@ -1,15 +1,13 @@
-<template>
-    <Projects />
+<template lang="pug">
+Projects
 </template>
 
 <script>
-
-import Projects from '~/components/organisms/projects.vue'
+import Projects from "~/components/organisms/projects.vue";
 export default defineComponent({
-    name: 'portfolio',
-    components: {
-        Projects
-    }
-})
-
+  name: "portfolio",
+  components: {
+    Projects,
+  },
+});
 </script>
