@@ -17,7 +17,7 @@ func NewService() *Service {
 
 func (bff *Service) GetArticles() ([]models.Artycle, error) {
 
-	jsonString, errFile := ioutil.ReadFile("/Users/jagudelo/projects/jeferagudeloc/resume/src/resume-api/internal/service/mocks/articles.json")
+	jsonString, errFile := ioutil.ReadFile("/usr/src/app/mocks/articles.json")
 	if errFile != nil {
 		fmt.Println(errFile)
 	}
@@ -30,7 +30,7 @@ func (bff *Service) GetArticles() ([]models.Artycle, error) {
 
 func (bff *Service) GetProjects() ([]models.Project, error) {
 	fmt.Println("GetProjects")
-	jsonString, errFile := ioutil.ReadFile("/Users/jagudelo/projects/jeferagudeloc/resume/src/resume-api/internal/service/mocks/portfolio.json")
+	jsonString, errFile := ioutil.ReadFile("/usr/src/app/mocks/portfolio.json")
 	if errFile != nil {
 		fmt.Println(errFile)
 	}

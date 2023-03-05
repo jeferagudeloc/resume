@@ -1,0 +1,25 @@
+version: '3'
+services:
+  app:
+    build:
+      context: './src/resume-api'
+      dockerfile: 'Dockerfile'
+    container_name: golang
+    ports: 
+      - 8080:8080 
+    restart: on-failure
+    volumes:
+      - ./src/resume-api:/usr/src/app/
+      - ./src/resume-api/internal/service/mocks:/usr/src/app/mocks
+  nuxt:
+    build:
+      context: './src/resume-ui'
+      dockerfile: 'Dockerfile'
+    image: nuxt_dev
+    container_name: nuxt_dev
+    command: yarn dev
+    volumes:
+    - ./src/resume-ui:/app
+    - /app/node_modules
+    ports:
+      - "3000:3000"
