@@ -18,6 +18,10 @@ export default defineComponent({
           redirectPath: "/about",
         },
         {
+          title: "resume",
+          redirectPath: "/resume",
+        },
+        {
           title: "portfolio",
           redirectPath: "/portfolio",
         },
