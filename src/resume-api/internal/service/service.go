@@ -28,6 +28,19 @@ func (bff *Service) GetArticles() ([]models.Artycle, error) {
 	return articlesOutput, nil
 }
 
+func (bff *Service) GetContainers() ([]models.Container, error) {
+
+	jsonString, errFile := ioutil.ReadFile("/usr/src/app/mocks/containers.json")
+	if errFile != nil {
+		fmt.Println(errFile)
+	}
+
+	containersOutput := []models.Container{}
+	json.Unmarshal([]byte(jsonString), &containersOutput)
+
+	return containersOutput, nil
+}
+
 func (bff *Service) GetProjects() ([]models.Project, error) {
 	fmt.Println("GetProjects")
 	jsonString, errFile := ioutil.ReadFile("/usr/src/app/mocks/portfolio.json")

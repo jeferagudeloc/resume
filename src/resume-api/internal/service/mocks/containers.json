@@ -1,0 +1,39 @@
+[
+    {
+        "name": "go-product-catalog"
+    },
+    {
+        "name": "mc-brand-api"
+    },
+    {
+        "name": "mc-product-business"
+    },
+    {
+        "name": "mc-product-catalog-api"
+    },
+    {
+        "name": "mc-user-api"
+    },
+    {
+        "name": "sb-classification-api"
+    },
+    {
+        "name": "sb-product-inbound-subscriber"
+    },
+    {
+        "name": "sb-sku-generator-api"
+    },
+    {
+        "name": "sb-tenant-api"
+    },
+    {
+        "name": "facl-product-adapter"
+    },
+    {
+        "name": "sod-product-adapter-odbms"
+    },
+    {
+        "name": "sod-product-adapter-pim"
+    }
+]
+

@@ -53,7 +53,7 @@ const CHART_OPTIONS_FRONT = {
         },
         {
           name: "reactjs",
-          y: 2,
+          y: 3,
         },
         {
           name: "angularjs",

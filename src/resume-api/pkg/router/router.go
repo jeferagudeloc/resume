@@ -10,6 +10,7 @@ import (
 type Controller interface {
 	GetArticles(w http.ResponseWriter, r *http.Request)
 	GetProjects(w http.ResponseWriter, r *http.Request)
+	GetContainers(w http.ResponseWriter, r *http.Request)
 }
 
 func RegisterRouter(ctrl Controller) http.Handler {
@@ -19,6 +20,7 @@ func RegisterRouter(ctrl Controller) http.Handler {
 	enableCORS(r)
 	r.HandleFunc("/articles", ctrl.GetArticles).Methods(http.MethodGet)
 	r.HandleFunc("/projects", ctrl.GetProjects).Methods(http.MethodGet)
+	r.HandleFunc("/containers", ctrl.GetContainers).Methods(http.MethodGet)
 	return r
 }
 

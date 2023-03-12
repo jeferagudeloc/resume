@@ -20,10 +20,25 @@ type Controller struct {
 type service interface {
 	GetArticles() ([]models.Artycle, error)
 	GetProjects() ([]models.Project, error)
+	GetContainers() ([]models.Container, error)
 }
 
 func (ctrl *Controller) GetArticles(w http.ResponseWriter, r *http.Request) {
 	helloMessage, err := ctrl.service.GetArticles()
+
+	if err != nil {
+		fmt.Errorf("Error getting hello world: %v", err)
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		responseBuffer := new(bytes.Buffer)
+		json.NewEncoder(responseBuffer).Encode(helloMessage)
+		w.Write(responseBuffer.Bytes())
+	}
+
+}
+
+func (ctrl *Controller) GetContainers(w http.ResponseWriter, r *http.Request) {
+	helloMessage, err := ctrl.service.GetContainers()
 
 	if err != nil {
 		fmt.Errorf("Error getting hello world: %v", err)
