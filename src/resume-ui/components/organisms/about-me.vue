@@ -4,20 +4,22 @@ section.flex.justify-center.items-center.h-screen.flex-col.space-y-0
     | {{ &quot;Hi!&quot; }}
   .mx-6.px-6.text-6xl.h-60
     | {{ title }}
+  img.w-40.h-40.rounded-3xl.grayscale-100(v-bind:src="'_nuxt/assets/img/me/memoji-wink.png'")
 section.flex.h-screen-half(data-aos='zoom-out-up' data-aos-offset='500' data-aos-duration='300' data-aos-easing='ease-in-sine' data-aos-anchor-placement='top-bottom')
-  .mx-6.px-6.text-2xl.flex.flex-col.items-center.space-y-10(:style='styleObject')
+  .mx-6.px-6.text-2xl.flex.flex-col.items-center.space-y-40(:style='styleObject')
     .mx-80
       span {{ desc }}
     .flex.flex-row.items-center.justify-end.space-x-40
       div &#x1F4CD; Live in Santiago de Chile
       div &#x1F4BB; Work in Santiago de Chile
       div &#x1F579;&#xFE0F; Esports Fan
+    img.w-40.h-40.rounded-3xl.grayscale-100(v-bind:src="'_nuxt/assets/img/me/memoji-mac.png'")
 section.flex.h-screen-half.flex-col.space-y-40(data-aos='zoom-out-up' data-aos-offset='500' data-aos-duration='300' data-aos-easing='ease-in-sine' data-aos-anchor-placement='top-bottom')
   .mx-6.px-6.flex.text-2xl.flex-col.items-center.space-y-10(:style='styleObject')
     .mx-80.text-4xl
       span I worked in the development of projects for:
     .flex.flex-row.items-center.justify-end.space-x-10
-      .transition.ease-in-out.duration-100.cursor-pointer(v-for='(company, index) in companies' class='hover:-translate-y-1 hover:scale-110' :class="index % 2 == 1 ? 'mt-12' : ''" @click='goToCompanyLanding(company.landing)')
+      .transition.ease-in-out.duration-100.cursor-pointer(v-for='(company, index) in companies' class='grayscale hover:grayscale-0 hover:-translate-y-1 hover:scale-110' :class="index % 2 == 1 ? 'mt-12' : ''" @click='goToCompanyLanding(company.landing)')
         .flex.items-center.justify-center
           img.w-20.h-20.rounded-3xl.grayscale-100(v-bind:src="'_nuxt/assets/img/companies/' + company.imagePath")
         .text-xl.text-center.mt-2 {{ company.name }}
@@ -25,7 +27,7 @@ section.flex.h-screen-half.flex-col.space-y-40(data-aos='zoom-out-up' data-aos-o
     .mx-80.text-4xl
       span With:
     .flex.flex-row.items-center.justify-end.space-x-10
-      .transition.ease-in-out.duration-100.cursor-pointer(v-for='(language, index) in languages' class='hover:-translate-y-1 hover:scale-110' :class="index % 2 != 1 ? 'mt-12' : ''" @click='goTolanguagePortfolio(language.id)')
+      .transition.ease-in-out.duration-100.cursor-pointer(v-for='(language, index) in languages' class='grayscale hover:-translate-y-1 hover:grayscale-0 hover:scale-110' :class="index % 2 != 1 ? 'mt-12' : ''" @click='goTolanguagePortfolio(language.id)')
         .flex.justify-center
           i(:class='`devicon-${language.id}-plain colored text-7xl`')
         .text-xl.text-center.mt-2 {{ language.name }}
