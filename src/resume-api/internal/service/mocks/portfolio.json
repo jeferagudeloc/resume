@@ -1,14 +1,14 @@
 [{
     "title": "Product & Pricing Portfolio - FTC",
-    "description": "Parte del equipo de desarrollo, participó en la implementación de los diferentes requerimientos hacia el producto.",
+    "description": "Parte del equipo de desarrollo, participo en la implementación de los diferentes requerimientos hacia el producto.",
     "projectDetail": {
-        "technicalDescription": "Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Go, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.Parte del equipo de desarrollo, participó en la implementación de los diferentes requerimientos hacia el producto. Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Go, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.",
+        "technicalDescription": "Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Go, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.Parte del equipo de desarrollo, participo en la implementación de los diferentes requerimientos hacia el producto. Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Go, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.",
         "techIdList": [
             "go",
             "micronaut-img",
             "spring",
-            "webpack",
             "vuejs",
+            "react",
             "googlecloud",
             "terraform"
         ]
