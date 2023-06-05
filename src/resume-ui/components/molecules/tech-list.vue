@@ -3,7 +3,7 @@
   .transition.ease-in-out.duration-100.cursor-pointer.grayscale(v-for='(tech, index) in techList' class='hover:-translate-y-1 hover:scale-110' :class="{ 'grayscale-0': selectedTechId === tech.id || colored }" @click='choose(tech.id)')
     .flex.justify-center
       i(:class='`devicon-${tech.id}-plain colored text-4xl`')
-      img.w-10.h-10.rounded-2xl.grayscale-100(v-if="tech.id.includes('-img')" v-bind:src="'_nuxt/assets/img/tech/' + tech.id + '.png'")
+      img.w-10.h-10.rounded-2xl.grayscale-100(v-if="tech.id.includes('-img')" v-bind:src="'/img/tech/' + tech.id + '.png'")
 </template>
 
 <script>

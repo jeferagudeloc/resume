@@ -1,6 +1,6 @@
 <template lang="pug">
-.bg-white.shadow.p-6.mx-36.mt-20.rounded-xl
-  span.text-4xl  get in touch
+.shadow.p-6.mx-20.mt-20.rounded-xl
+  span.text-4xl {{ $t('contact.getInTouch') }}
   .flex.justify-around.align-middle.items-center
     ContactForm
   LinkButtons

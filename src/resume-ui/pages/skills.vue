@@ -1,8 +1,9 @@
 <template lang="pug">
 .flex.justify-center
-  select#1(name='x' v-model='selected')
-    option(value='dev') dev skills
-    option(value='cloud') cloud skills
+  div.px-12.mt-1.cursor-pointer.text-4xl.text-white(v-for="option in options" :key="option.id" :class="{ 'text-black': selected == option.id }")
+    font-awesome-icon.text-md(:icon='`fa-solid fa-${option.icon}`' @click="selected = option.id")
+div.text-center.mt-4
+  span {{ $t(selected) }}
 .flex.flex-col.mt-12.px-40(v-if="selected == 'dev'")
   .rounded-lg.bg-gray-100.shadow-lg.p-6
     h2.text-2xl.mb-8 Frontend
@@ -17,6 +18,11 @@
     h2.text-2xl.mb-8 Cloud
     TechList(:colored='true' :techList='cloudPlatforms')
     highchart(:options='chartOptionsCloud')
+.flex.flex-col.mt-12.px-40(v-if="selected == 'tools'")
+  .rounded-lg.bg-gray-100.shadow-lg.p-6
+    h2.text-2xl.mb-8 Tools
+    TechList(:colored='true' :techList='tools')
+    highchart(:options='chartOptionsTools')
 
 </template>
 
@@ -25,81 +31,34 @@
     CHART_OPTIONS_FRONT,
     CHART_OPTIONS_BACK,
     CHART_OPTIONS_CLOUD,
-  } from "@/utils/constants/charts";
+    CHART_OPTIONS_TOOLS
+  } from "@/constants/charts";
+  import { FRONTEND_LANGUAGES } from "@/constants/frontendLanguages.ts";
+  import { BACKEND_LANGUAGES, CLOUD_PLATFORMS } from "@/constants/backendLanguages.ts";
+  import { TOOLS } from "@/constants/tools.ts";
   import TechList from "~/components/molecules/tech-list.vue";
   export default defineComponent({
     data() {
       return {
+        options: [{
+          id: "dev",
+          icon: "desktop",
+        }, {
+          id: "cloud",
+          icon: "cloud",
+        }, {
+          id: "tools",
+          icon: "toolbox",
+        }],
         selected: "dev",
         chartOptionsFront: CHART_OPTIONS_FRONT,
         chartOptionsBack: CHART_OPTIONS_BACK,
         chartOptionsCloud: CHART_OPTIONS_CLOUD,
-        frontendLanguages: [{
-            id: "vuejs",
-            name: "Vue 3",
-          },
-          {
-            id: "angularjs-img",
-            name: "Angular JS",
-          },
-          {
-            id: "angularjs",
-            name: "Angular",
-          },
-          {
-            id: "nuxtjs",
-            name: "NuxtJS",
-          },
-          {
-            id: "react",
-            name: "ReactJS",
-          },
-          {
-            id: "vuex-img",
-            name: "VuexJS",
-          },
-          {
-            id: "cypress-img",
-            name: "CypressJS",
-          }
-        ],
-
-        backendLanguages: [{
-            id: "nestjs",
-            name: "Nest JS",
-          },
-          {
-            id: "csharp",
-            name: "CSharp",
-          },
-          {
-            id: "python",
-            name: "python",
-          },
-          {
-            id: "spring",
-            name: "Spring Boot",
-          },
-          {
-            id: "go",
-            name: "Go",
-          },
-          {
-            id: "android",
-            name: "Android",
-          },
-          {
-            id: "serverless-img",
-            name: "serverless-img",
-          },
-        ],
-        cloudPlatforms: [{
-          id: "google",
-        }, {
-          id: "amazonwebservices",
-        }, {
-          id: "terraform",
-        }]
+        frontendLanguages: FRONTEND_LANGUAGES,
+        backendLanguages: BACKEND_LANGUAGES,
+        cloudPlatforms: CLOUD_PLATFORMS,
+        tools: TOOLS,
+        chartOptionsTools: CHART_OPTIONS_TOOLS
       };
     },
     components: {
@@ -107,3 +66,9 @@
     },
   });
 </script>
+
+<style>
+.text-black {
+  color: #000000;
+}
+</style>

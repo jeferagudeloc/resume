@@ -24,7 +24,7 @@ const CHART_OPTIONS_FRONT = {
     title: {
       enabled: false,
     },
-    categories: ["nuxtjs", "reactjs", "angularjs", "angular", "vuejs", "vuex", "cypress"],
+    categories: ["nuxtjs", "reactjs", "angularjs", "angular", "vuejs", "vuex", "redux", "cypress"],
   },
   yAxis: {
     opposite: true,
@@ -72,6 +72,10 @@ const CHART_OPTIONS_FRONT = {
           y: 4,
         },
         {
+          name: "vuex",
+          y: 3,
+        },
+        {
           name: "cypress",
           y: 4,
         },
@@ -115,6 +119,7 @@ const CHART_OPTIONS_BACK = {
       "python",
       "android",
       "serverless",
+      "bash",
     ],
   },
   yAxis: {
@@ -165,6 +170,10 @@ const CHART_OPTIONS_BACK = {
         {
           name: "serverless",
           y: 4,
+        },
+        {
+          name: "bash",
+          y: 2,
         },
       ],
     },
@@ -286,4 +295,111 @@ const CHART_OPTIONS_CLOUD = {
   ],
 };
 
-export { CHART_OPTIONS_FRONT, CHART_OPTIONS_BACK, CHART_OPTIONS_CLOUD };
+
+
+const CHART_OPTIONS_TOOLS = {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: "bar",
+    backgroundColor: "rgba(0,0,0,0)",
+  },
+  credits: {
+    enabled: false,
+  },
+  legend: {
+    enabled: false,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  title: {
+    text: null,
+    enabled: false,
+  },
+  xAxis: {
+    title: {
+      enabled: false,
+    },
+
+    categories: [
+      "git",
+      "terraform",
+      "docker",
+      "postman",
+      "jira",
+      "nginx",
+      "androidstudio",
+      "xcode",
+      "figma",
+      "gradle"
+    ],
+  },
+  yAxis: {
+    opposite: true,
+    title: {
+      enabled: true,
+      text: "Expertise",
+      margin: 20,
+    },
+    max: 5,
+    categories: [
+      "-",
+      "BEGINNER",
+      "ELEMENTARY",
+      "INTERMEDIATE",
+      "ADVANCED",
+      "EXPERT",
+    ],
+  },
+  series: [
+    {
+      color: "rgb(64 64 64 / 1)",
+      data: [
+        {
+          name: "git",
+          y: 4,
+        },
+        {
+          name: "terraform",
+          y: 3,
+        },
+        {
+          name: "docker",
+          y: 4,
+        },
+        {
+          name: "postman",
+          y: 4,
+        },
+        {
+          name: "jira",
+          y: 3,
+        },
+        {
+          name: "nginx",
+          y: 4,
+        },
+        {
+          name: "androidstudio",
+          y: 3,
+        },
+        {
+          name: "xcode",
+          y: 2,
+        },
+        {
+          name: "figma",
+          y: 2,
+        },
+        {
+          name: "gradle",
+          y: 4,
+        },
+      ],
+    },
+  ],
+};
+
+export { CHART_OPTIONS_FRONT, CHART_OPTIONS_BACK, CHART_OPTIONS_CLOUD, CHART_OPTIONS_TOOLS };

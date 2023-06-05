@@ -7,6 +7,7 @@ ProjectList(:projectList='projectList' :selectedTechId='selectedTechId')
 <script>
 import TechList from "~/components/molecules/tech-list.vue";
 import ProjectList from "~/components/molecules/project-list.vue";
+import { MAIN_LANGUAGES } from '@/constants/mainLanguages.ts'
 export default defineComponent({
   name: "projects",
   data() {
@@ -16,10 +17,10 @@ export default defineComponent({
           title:
             "Product & Pricing Portfolio - FTCProduct & Pricing Portfolio - FTC",
           description:
-            "Parte del equipo de desarrollo, participó en la implementación de los diferentes requerimientos hacia el producto.",
+            "Parte del equipo de desarrollo, participo en la implementación de los diferentes requerimientos hacia el producto.",
           projectDetail: {
             technicalDescription:
-              "Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Golang, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.Parte del equipo de desarrollo, participó en la implementación de los diferentes requerimientos hacia el producto. Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Golang, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.",
+              "Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Golang, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.Parte del equipo de desarrollo, participo en la implementación de los diferentes requerimientos hacia el producto. Bajo una arquitectura orientada a eventos, se está trabajando con diferentes micro-servicios desarrollados en Golang, Micronaut y Spring Boot para el backend. Para la interfaz de usuario, se está trabajando con Micro Frontend usando: Webpack 5, Module Federation, y Vue 3, aplicando Atomic Design para manejar las distintas funcionalidades.",
             techIdList: [
               "golang",
               "micronaut",
@@ -33,48 +34,7 @@ export default defineComponent({
           companyId: "falabella",
         },
       ],
-      languages: [
-        {
-          id: "nestjs",
-          name: "Nest JS",
-        },
-        {
-          id: "spring",
-          name: "Spring Boot",
-        },
-        {
-          id: "go",
-          name: "Go",
-        },
-        {
-          id: "vuejs",
-          name: "Vue 3",
-        },
-        {
-          id: "angularjs",
-          name: "Angular",
-        },
-        {
-          id: "android",
-          name: "Android",
-        },
-        {
-          id: "googlecloud",
-          name: "Google Cloud",
-        },
-        {
-          id: "nuxtjs",
-          name: "NuxtJS",
-        },
-        {
-          id: "amazonwebservices",
-          name: "Amazon Web Services",
-        },
-        {
-          id: "terraform",
-          name: "Terraform",
-        },
-      ],
+      languages: MAIN_LANGUAGES,
       selectedTechId: null,
     };
   },
