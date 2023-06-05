@@ -16,7 +16,7 @@
       span.ml-3 Santiago
 .grid.grid-cols-12.gap-12.mx-36.p-6.px-12.bg-white.shadow-xl
   .col-span-2(class='sm:col-span-2')
-    img.w-36.h-36.ml-16.grayscale.rounded-full(v-bind:src="'_nuxt/assets/img/me/profile.png'")
+    img.w-36.h-36.ml-16.grayscale.rounded-full(v-bind:src="'/img/me/profile.png'")
   .col-span-10(class='sm:col-span-10').mt-6
     span.text-xl {{ $t('resume.overview') }}
 

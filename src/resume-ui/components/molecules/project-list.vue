@@ -6,7 +6,7 @@
     div
       .flex.items-center.justify-center.mt-6
         img.w-20.h-20.rounded-3xl.grayscale-100(v-bind:src="\
-        '_nuxt/assets/img/companies/' +\
+        '/img/companies/' +\
         viewDetailsProject.companyId +\
         '.png'\
         ")
@@ -23,12 +23,12 @@
         div(v-for='techId in viewDetailsProject.projectDetail.techIdList')
           i(v-if="!techId.includes('-original')" :class='`devicon-${techId}-plain colored text-4xl`')
           i(v-if="techId.includes('-original')" :class='`devicon-${techId} colored text-4xl`')
-          img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'_nuxt/assets/img/tech/' + techId + '.png'")
+          img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'/img/tech/' + techId + '.png'")
       .flex.justify-center.items-center.border-t-2.border-neutral-100.py-3.px-6.mt-auto.text-center.cursor-pointer(class='dark:border-neutral-600 dark:text-neutral-50' @click='setStyle(viewDetailsProject)')
         span  Hide detail 
 .flex.flex-wrap.justify-center.mt-6
   .max-w-sm.rounded-xl.bg-white.shadow-xl.mb-6.mr-6.flex.flex-col(v-for='project in filteredProjects' class='dark:bg-neutral-700')
-    img.rounded-t-xl(v-bind:src='`_nuxt/assets/img/projects/${project.imageId}`')
+    img.rounded-t-xl(v-bind:src='`/img/projects/${project.imageId}`')
     .p-6
       h5.mb-2.text-xl.font-medium.leading-tight.text-neutral-800(class='dark:text-neutral-50')
         | {{ project.title }}
@@ -38,7 +38,7 @@
       div(v-for='techId in project.projectDetail.techIdList')
         i(v-if="!techId.includes('-original')" :class='`devicon-${techId}-plain colored text-4xl`')
         i(v-if="techId.includes('-original')" :class='`devicon-${techId} colored text-4xl`')
-        img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'_nuxt/assets/img/tech/' + techId + '.png'")
+        img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'/img/tech/' + techId + '.png'")
     .columns-2.mt-auto.mb-2
       .text-base.text-neutral-600.text-center(class='dark:text-neutral-200')
         | from: {{ project.initialDate }}

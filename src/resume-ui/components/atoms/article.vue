@@ -11,7 +11,7 @@
       div(v-for='techId in techIdList')
         i(v-if="!techId.includes('-original')" :class='`devicon-${techId}-plain colored text-4xl`')
         i(v-if="techId.includes('-original')" :class='`devicon-${techId} colored text-4xl`')
-        img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'_nuxt/assets/img/tech/' + techId + '.png'")
+        img.w-10.h-10.rounded-2xl.grayscale-100(v-if="techId.includes('-img')" v-bind:src="'/img/tech/' + techId + '.png'")
   .flex.flex-col.justify-center
     .py-3.px-6.text-center.cursor-pointer(class='dark:text-blue-500')
       a.text-2xl(:href='link' target='redirect')

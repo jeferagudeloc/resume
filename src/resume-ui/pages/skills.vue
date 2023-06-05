@@ -1,6 +1,6 @@
 <template lang="pug">
 .flex.justify-center
-  div.px-12.mt-1.cursor-pointer.text-4xl.text-white(v-for="option in options" :key="option.id" :class="{ 'text-sky-400': selected === option.id }")
+  div.px-12.mt-1.cursor-pointer.text-4xl.text-white(v-for="option in options" :key="option.id" :class="{ 'text-black': selected == option.id }")
     font-awesome-icon.text-md(:icon='`fa-solid fa-${option.icon}`' @click="selected = option.id")
 div.text-center.mt-4
   span {{ $t(selected) }}
@@ -66,3 +66,9 @@ div.text-center.mt-4
     },
   });
 </script>
+
+<style>
+.text-black {
+  color: #000000;
+}
+</style>
